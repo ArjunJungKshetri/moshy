@@ -161,8 +161,17 @@ a {
     height: 40px;
 }
 
+.icon--small {
+    width: 30px;
+    height: 30px;
+}
+
 .icon--primary {
     fill: var(--color-primary);
+}
+
+.icon--white {
+    fill: #fff;
 }
 
 .icon-container {
@@ -173,6 +182,10 @@ a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+
+.icon-container--accent {
+    background: var(--color-accent);
 }
 
 /* Buttons */
@@ -342,6 +355,19 @@ a {
     margin-bottom: 2rem;
 }
 
+.plan--popular .card__header {
+    position: relative;
+}
+
+.plan--popular .card__header::before {
+    content: url(../images/popular.svg);
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    right: 5%;
+}
+
 @media screen and (min-width: 1024px) {
     .plan__name {
         font-size: 1.4rem;
@@ -409,6 +435,11 @@ a {
     font-style: normal;
 }
 
+.quote__growth {
+    position: relative;
+    bottom: 13px;
+}
+
 @media screen and (min-width: 1024px) {
     .quote {
         font-size: 2rem;
@@ -447,7 +478,17 @@ a {
 }
 
 .testimonial__image {
+    position: relative;
+}
+
+.testimonial__image > img {
     width: 100%;
+}
+
+.testimonial__image > .icon-container {
+    position: absolute;
+    top: 3rem;
+    right: -32px;
 }
 
 /* Callouts */
